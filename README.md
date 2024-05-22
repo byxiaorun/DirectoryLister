@@ -21,7 +21,7 @@
  - 2018/07/18，修复 当程序位置网站子目录下时，CSS JS 路径错误的问题。
  - 2018/03/26，修复 当前文件夹下无 README.html 文件时，PHP会提示警告的问题。
  
-![新旧式样手机效果对比](https://github.com/ToyoDAdoubiBackup/DirectoryLister/raw/master/Compared.png)
+![新旧式样手机效果对比](https://github.com/byxiaorun/DirectoryLister/raw/master/Compared.png)
 
 ### 演示示例：
 
