@@ -16,7 +16,7 @@ return array(
         'resources',
         'resources/*',
         'ErrorFiles',
-        'ErrorFiles/*',
+		'ErrorFiles/*',
         'analytics.inc',
         '*.php',
         '*.html',

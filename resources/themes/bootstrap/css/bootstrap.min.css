@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * Bootstrap v3.3.4 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -88,7 +88,7 @@ code,kbd,pre,samp {
 button,input,optgroup,select,textarea {
 	margin:0;
 	font:inherit;
-	color:inherit
+	color:#000;
 }
 button {
 	overflow:visible
@@ -1032,8 +1032,8 @@ body {
 	font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
 	font-size:14px;
 	line-height:1.42857143;
-	color:#333;
-	background-color:#eee;
+	color:#fff;
+	background-color: #EFF4F8;
 }
 button,input,select,textarea {
 	font-family:inherit;
@@ -1041,13 +1041,13 @@ button,input,select,textarea {
 	line-height:inherit
 }
 a {
-	color:#337ab7;
+	color: #59b6ff;
 	text-decoration:none;
 	transition: 0.3s;
 	cursor: pointer;
 }
 a:focus,a:hover {
-	color:#d24542;
+	color: #ffffff;
 }
 a:focus {
 	outline:thin dotted;
@@ -1114,7 +1114,7 @@ hr {
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
 	font-weight:500;
 	line-height:1.1;
-	color:inherit
+	color:inherit;
 }
 .h1 .small,.h1 small,.h2 .small,.h2 small,.h3 .small,.h3 small,.h4 .small,.h4 small,.h5 .small,.h5 small,.h6 .small,.h6 small,h1 .small,h1 small,h2 .small,h2 small,h3 .small,h3 small,h4 .small,h4 small,h5 .small,h5 small,h6 .small,h6 small {
 	font-weight:400;
@@ -1154,9 +1154,9 @@ hr {
 	font-size:10px
 }
 p {
-	margin:0 0 10px;
+	margin:15px 0 15px;
 	font-size:15px;
-	text-indent:28px;
+	text-indent:0px;
 }
 .lead {
 	margin-bottom:20px;
@@ -1421,10 +1421,17 @@ pre code {
 	margin-right:auto;
 	margin-left:auto
 }
-@media (max-width:767px) {
+@media (min-width:768px) {
 	.container {
-	padding-right:5px;
-	padding-left:5px;
+	width:750px
+}
+}@media (min-width:992px) {
+	.container {
+	width:970px
+}
+}@media (min-width:1200px) {
+	.container {
+	width:1170px;
 }
 }.container-fluid {
 	padding-right:15px;
@@ -2070,7 +2077,8 @@ pre code {
 	margin-left:0
 }
 }table {
-	background-color:transparent
+	background-color:transparent;
+    float:right;
 }
 caption {
 	padding-top:8px;
@@ -2610,7 +2618,16 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 }.btn {
 	display:inline-block;
 	padding:6px 12px;
-	margin-bottom:0;
+	margin-bottom: 16px;7px8px9px0px1px2px3px4px5px6px5px4px3px2px1px0px9px8px7px6px5px4px3px2px1px0px
+	px;
+	px;
+	px;
+	px;
+	px;
+	px;
+	px;
+	px;
+	px;
 	font-size:14px;
 	font-weight:400;
 	line-height:1.42857143;
@@ -2626,7 +2643,7 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 	user-select:none;
 	background-image:none;
 	border:1px solid transparent;
-	border-radius:4px
+	border-radius:4px;
 }
 .btn.active.focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn:active:focus,.btn:focus {
 	outline:thin dotted;
@@ -2801,9 +2818,9 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 }
 .btn-group-lg>.btn,.btn-lg {
 	padding:10px 16px;
-	font-size:18px;
+	font-size: 13px;
 	line-height:1.3333333;
-	border-radius:6px
+	border-radius:6px;
 }
 .btn-group-sm>.btn,.btn-sm {
 	padding:5px 10px;
@@ -3262,7 +3279,8 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 	padding:10px 15px
 }
 .nav>li>a:focus,.nav>li>a:hover {
-	text-decoration:none
+	text-decoration:none;
+	background-color: #24292e;
 }
 .nav>li.disabled>a {
 	color:#777
@@ -3711,7 +3729,12 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 	margin-right:0
 }
 }.navbar-default {
-	background-color: #444;
+	background-color: #4a4a4a;
+	border-color: #ffffff;
+	border-bottom: 1px solid #fff !important;
+	-webkit-box-shadow: 0 -5px 0 rgba(0,0,0,.1);
+	-moz-box-shadow: 0 -4px 0 rgba(0,0,0,.1);
+	box-shadow: 0 6px 0 rgba(0,0,0,.1);
 }
 .navbar-default .navbar-brand {
 	color:#777
@@ -3721,14 +3744,14 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 	background-color:transparent
 }
 .navbar-default .navbar-text {
-	color:#fff
+	color:#eee
 }
 .navbar-default .navbar-text a {
 	color:#fff;
-	border-bottom: solid 1px #999;
+	box-shadow: 0px 1px 0px 0px #999999;
 }
 .navbar-default .navbar-text a:hover {
-	border-bottom: solid 1px #fff;
+	box-shadow: 0px 1px 0px 0px #fff;
 }
 .navbar-default .navbar-nav>li>a {
 	color:#777
@@ -5562,4 +5585,143 @@ td.visible-print,th.visible-print {
 	.hidden-print {
 	display:none!important
 }
+}
+
+
+.readme {
+	margin: 10px -15px 7px;
+	background-color: #FFFFFF;
+	padding: 30px;
+	padding-top: 0px;
+}
+.readme hr {
+	border-top: 1px solid #dedede;
+	margin-top: 10px;
+}
+.readme h1 {
+	font-size: 20px;
+	padding-bottom: 20px;
+	border-bottom: solid 1px #dadada;
+}
+.readme h2 {
+	font-size: 20px;
+	padding-bottom: 10px;
+	padding-top: 30px;
+	border-bottom: solid 1px #dadada;
+}
+.readme h3 {
+	font-size: 20px;
+	margin-top: 20px;
+	padding-bottom: 5px;
+	border-bottom: solid 1px #dadada;
+}
+.readme h4 {
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 15px;
+	text-indent: 0;
+}
+.readme ul {
+	font-size:15px;
+}
+.readme blockquote {
+	border-left: 5px solid #ccc;
+	background-color: #f1f1f1;
+	color: #222;
+	font-size: 15px;
+	text-indent: 33px;
+	transition: 0.3s;
+}
+.readme blockquote:hover {
+	border-left: 5px solid #159e83;
+	background-color: #eee;
+	transition: 0.3s;
+}
+.readme blockquote::before{
+	position: absolute;
+	font-family: FontAwesome;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 0;
+	-webkit-font-smoothing: antialiased;
+	color: #666;
+	text-indent: 0;
+	margin-top: 10px;
+	margin-left: -39px;
+	content: "\f10d";
+	transition: 0.3s;
+}
+.readme blockquote:hover::before{
+	color: #222;
+	transition: 0.3s;
+}
+.readme ul li {
+	list-style: none;
+}
+.readme ul li::before{
+	position: absolute;
+	font-family: FontAwesome;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 0;
+	-webkit-font-smoothing: antialiased;
+	color: #222;
+	text-indent: 0;
+	margin-top: 10px;
+	margin-left: -39px;
+	padding-left: 20px;
+	content: "\f105";
+	transition: 0.3s;
+}
+.readme ul li:hover::before{
+	padding-left: 26px;
+	transition: 0.3s;
+	content: "\f101";
+}
+/*
+color: #159e83;
+\f0da
+\f105
+\f101
+*/
+.readme table {
+	border-top: solid 1px #ddd;
+	border-left: solid 1px #ddd;
+	margin-bottom: 16px;
+	text-indent: 0;
+}
+.readme table th {
+	background-color: #1abc9c;
+	color: #fff;
+	text-align: center;
+}
+.readme table td,.readme table th {
+	border-bottom: solid 1px #ddd;
+	border-right: solid 1px #ddd;
+	padding: 5px 10px;
+}
+.readme table tr {
+	background-color: #fff;
+	transition: 0.3s;
+}
+.readme table tr:hover {
+	background-color: #f9f9f9;
+	transition: 0.3s;
+}
+tbody tr:nth-child(odd) {
+	background-color: #f9f9f9;
+}
+.announcement {
+	color: #777;
+	border-bottom: solid 3px #d0d0d0;
+	background-color: #f8f8f8;
+	padding: 10px 10px;
+	text-align: center;
+	transition: 0.3s;
+}
+.announcement:hover {
+	border-bottom: solid 3px #159e83;
+	transition: 0.3s;
 }

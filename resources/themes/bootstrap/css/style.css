@@ -1,34 +1,23 @@
-﻿/* ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
 /* -----| GENERAL |------------------------------------------------------------------------------ */
 /* ---------------------------------------------------------------------------------------------- */
-* {
-  margin: 0;
-}
-html, body {
-  height: 100%;
-}
+
 body {
-    padding: 70px 0 0;
-	background-color: #fff;
+   background: #2b3137;
 }
 
 body.breadcrumb-fixed {
     padding-top: 56px;
 }
 
-.container {
-    max-width: 960px;
-	min-height: 100%;
-	/* equal to footer height */
-	margin-bottom: -100px; 
-}
-footer.container {
-	margin-bottom: 0;
-    min-height: 0;
-}
-.container:after {
-  content: "";
-  display: block;
+.container {}
+
+hr{
+        margin: 40px 0;
+    height: 3px;
+    border: none;
+    background-color: #ddd;
+    background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -38,12 +27,12 @@ footer.container {
 #page-navbar .navbar-text {
     display: block;
     float: left;
-	font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
+    font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
     max-width: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-weight: 600;
+    font-size: 18px;
 }
 
 
@@ -52,13 +41,13 @@ footer.container {
 /* ---------------------------------------------------------------------------------------------- */
 
 #directory-list-header {
-	font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
+    font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
     font-weight: bold;
     padding: 10px 15px;
 }
 
 #directory-listing {
-	font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
+    font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
 }
 
 #directory-listing li {
@@ -72,7 +61,7 @@ footer.container {
 }
 
 .file-name i {
-    color: #555;
+    color: yellow;
 }
 
 .file-info-button,
@@ -96,9 +85,12 @@ footer.container {
 /* ---------------------------------------------------------------------------------------------- */
 
 .footer {
-	padding: 20px 0 20px 15px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
     color: #717171;
 }
+
 
 /* ---------------------------------------------------------------------------------------------- */
 /* -----| CHECKSUM MODAL |----------------------------------------------------------------------- */
@@ -115,10 +107,19 @@ footer.container {
 
 #file-info .md5-hash,
 #file-info .sha1-hash {
-	font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
+    font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
 }
 
+.readme{
+    background-color: #24292e;
+    color: #e2e2e2;
+    border-radius: 4px;
+    padding-top: 20px;
+}
 
+#directory-list-header{
+    color:white;
+}
 /* -------------------------------------------------------------------------- */
 /* -----| RESPONSIVE |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -156,188 +157,38 @@ footer.container {
     }
 
 }
-.path-top {
-	padding-top: 5px;
-    padding-bottom: 1px;
-}
-.path-announcement2 {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-.path-announcement {
-	margin-top: 58px;
-    background-color: #fafbfc;
-    border-bottom: 1px solid #e1e4e8;
-}
-.path-announcement p {
-    color: #444444;
-    line-height: 3;
-    margin-left: 15px;
-}
-.path-announcement a {
-	color: #777;
-    border-bottom: solid 1px #999;
-}
-.path-announcement a:focus,.path-announcement a:hover {
-	color: #337ab7;
-    border-bottom: solid 1px #555;
-}
-.path-announcement i {
-	margin-right: 10px;
-}
-.path-announcement i,.path-announcement p {
-    display: inline;
-}
-.page-content {
-	margin-top: 50px;
-}
-.readme-background {
-	margin-bottom: 140px;
-	margin-top: 120px
-}
-/*
-.readme-background:hover {
-	background-position:-66px 0;
-}
-*/
-.readme {
-	background-color: #fefefe;
+
+
+
+.filelist{
+    background-color: #2b3137;
     padding: 20px;
-    border: 1px solid #ececec;
+    margin: 0 auto;
 }
-.readme hr {
-	border-top: 1px solid #dedede;
-	margin-top: 10px;
+
+.top{
+    background-color: #24292e;
+    padding: 18px 6% 0px;
+    color: white;
 }
-.readme h1 {
-	font-size: 26px;
-	padding-bottom: 20px;
-	border-bottom: solid 1px #dadada;
+
+
+.logo{
+    font-size: 20px;
 }
-.readme h2 {
-	font-size: 22px;
-	padding-bottom: 10px;
-	border-bottom: solid 1px #dadada;
+
+@media (max-width: 767px) {
+    .filelist{
+        padding: 3%;
 }
-.readme h3 {
-	font-size: 18px;
-	margin-top: 20px;
-	padding-bottom: 5px;
-	border-bottom: solid 1px #dadada;
+    }
+
+
+.readme p img{
+    max-width: 100%;
 }
-.readme h4 {
-	font-size: 16px;
-	font-weight: bold;
-	padding-bottom: 15px;
-	text-indent: 0;
-}
-.readme ul {
-	font-size:14px;
-	line-height: 2;
-}
-.readme blockquote {
-	border-left: 5px solid #ccc;
-	background-color: #f1f1f1;
-	color: #222;
-	font-size: 15px;
-	text-indent: 33px;
-	transition: 0.3s;
-}
-.readme blockquote:hover {
-	border-left: 5px solid #159e83;
-	background-color: #eee;
-	transition: 0.3s;
-}
-.readme blockquote::before{
-	position: absolute;
-	font-family: FontAwesome;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 0;
-	-webkit-font-smoothing: antialiased;
-	color: #666;
-	text-indent: 0;
-	margin-top: 10px;
-	margin-left: -39px;
-	content: "\f10d";
-	transition: 0.3s;
-}
-.readme blockquote:hover::before{
-	color: #222;
-	transition: 0.3s;
-}
-.readme ul li {
-	list-style: none;
-}
-.readme ul li::before{
-	position: absolute;
-	font-family: FontAwesome;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 0.5;
-	-webkit-font-smoothing: antialiased;
-	color: #222;
-	text-indent: 0;
-	margin-top: 10px;
-	margin-left: -39px;
-	padding-left: 20px;
-	content: "\f105";
-	transition: 0.3s;
-}
-.readme ul li:hover::before{
-	padding-left: 26px;
-	transition: 0.3s;
-	content: "\f101";
-}
-/*
-color: #159e83;
-\f0da
-\f105
-\f101
-*/
-.readme table {
-	border-top: solid 1px #ddd;
-	border-left: solid 1px #ddd;
-	margin-bottom: 16px;
-	text-indent: 0;
-}
-.readme table th {
-	background-color: #1abc9c;
-	color: #fff;
-	text-align: center;
-}
-.readme table td,.readme table th {
-	border-bottom: solid 1px #ddd;
-	border-right: solid 1px #ddd;
-	padding: 5px 10px;
-}
-.readme table tr {
-	background-color: #fff;
-	transition: 0.3s;
-}
-.readme table tr:hover {
-	background-color: #f9f9f9;
-	transition: 0.3s;
-}
-.readme img {
-	max-width:100%;
-	height:auto;
-}
-tbody tr:nth-child(odd) {
-	background-color: #f9f9f9;
-}
-.announcement {
-	color: #777;
-	border-bottom: solid 3px #d0d0d0;
-	background-color: #f8f8f8;
-	padding: 10px 10px;
-	text-align: center;
-	transition: 0.3s;
-}
-.announcement:hover {
-	border-bottom: solid 3px #159e83;
-	transition: 0.3s;
+
+
+.readme  img{
+    max-width: 100%;
 }

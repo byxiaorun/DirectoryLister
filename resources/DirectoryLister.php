@@ -13,6 +13,14 @@
  * @author Chris Kankiewicz (http://www.chriskankiewicz.com)
  * @copyright 2015 Chris Kankiewicz
  */
+ function custom_fnmatch($pattern, $string) {
+    $pattern = str_replace(
+        ['*', '?'],
+        ['.*', '.'],
+        preg_quote($pattern, '/')
+    );
+    return preg_match('/^' . $pattern . '$/i', $string);
+}
 class DirectoryLister {
 
     // 定义应用程序版本
@@ -71,7 +79,7 @@ class DirectoryLister {
      */
     public function isZipEnabled() {
         foreach ($this->_config['zip_disable'] as $disabledPath) {
-            if (fnmatch($disabledPath, $this->_directory)) {
+            if (custom_fnmatch($disabledPath, $this->_directory)) {
                 return false;
             }
         }
@@ -98,7 +106,7 @@ class DirectoryLister {
             $filename_no_ext = basename($directory);
 
             if ($directory == '.') {
-                $filename_no_ext = 'DOUBI Soft';
+                $filename_no_ext = '小润的云盘';
             }
 
             // We deliver a zip file
@@ -194,7 +202,7 @@ class DirectoryLister {
         // 静态设置主页路径
         $breadcrumbsArray[] = array(
             'link' => $this->_appURL,
-            'text' => 'DOUBI Soft'
+            'text' => '小润的私有云'
         );
 
         // Generate breadcrumbs
@@ -361,6 +369,7 @@ class DirectoryLister {
         return $fileSize;
 
     }
+
 
     /**
      * Set directory path variable
@@ -722,7 +731,7 @@ class DirectoryLister {
         // Compare path array to all hidden file paths
         foreach ($this->_config['hidden_files'] as $hiddenPath) {
 
-            if (fnmatch($hiddenPath, $filePath)) {
+            if (custom_fnmatch($hiddenPath, $filePath)) {
 
                 return true;
 

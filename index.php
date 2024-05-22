@@ -9,6 +9,7 @@
     // Restrict access to current directory
     ini_set('open_basedir', getcwd());
 
+
     if (isset($_GET['zip'])) {
 
         $dirArray = $lister->zipDirectory($_GET['zip']);
